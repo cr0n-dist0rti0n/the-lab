@@ -61,6 +61,7 @@ echo ""
 echo "~~~~~~~~~~~~~ Installing IP ~~~~~~~~~~~~~"
 echo ""
 echo "Address ${ip_address}" | docker exec -i ator-relay sh -c 'cat >> /etc/tor/torrc'
+docker restart ator-relay
 echo ""
 echo "${YELLOW}Would you like to start nyx? (y/n)${RESET}"
 read nyx_load
